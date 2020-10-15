@@ -1,6 +1,6 @@
-<!--Bài 6: Viết hàm kiểm tra một số bất kì nhập vào có phải số nguyên tố không 
-    dựa vào khái niệm"số nguyên tố là số lớn hơn 1 và chia hết cho 1 và chính nó"
-Test với 2 số: 1123, 2345
+<!--Bài 7: Tương tự bài 6 nhưng áp dụng khái niệm: “n là số nguyên tố thì trong khoảng từ 2 đến căn bậc hai cua n sẽ không tồn tại số mà n chia hết”
+Với khái niệm này số lần lặp sẽ được giảm đáng kể và bài toán sẽ tối ưu hơn
+
 -->
 <html>
 
@@ -17,8 +17,14 @@ Test với 2 số: 1123, 2345
             if (n < 2) {
                 a = false;
             }
+            else if (n == 2) {
+                a = true;
+            }
+            else if (n % 2 == 0) {
+                a = false;
+            }
             else {
-                for (var i = 2; i < n - 1; i++) {
+                for (var i = 3; i < Math.sqrt(n); i += 2) {
                     if (n % i == 0) {
                         a = false;
                         break;

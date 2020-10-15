@@ -1,0 +1,29 @@
+<!--Bài 9: Dùng vòng lặp While, viết hàm tính tổng các số chia hết cho 3 trong khoảng từ 0 đến n
+Test thử với n = 300, 500, 1000
+
+-->
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        var n = parseInt(prompt("nhap so bat ky"));
+        function tong(n) {
+            var sum = 0;
+            var x = 0;
+            while (x <= n) {
+                if (x % 3 == 0) {
+                    sum += x;
+                }
+                x++;
+            }
+            document.write(" Ket qua la: " + sum + "<br/>");
+        }
+        tong(n);
+    </script>
+</body>
+
+</html>

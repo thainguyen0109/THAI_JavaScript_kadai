@@ -1,0 +1,35 @@
+<!--Bài 10: Vsử dụng function để giải quyết bài toán: nhập vào số tự nhiên n>0 
+    và đưa ra giá trị của biểu thức A = 1/n + 2/n + 3/n + ... + n/n
+-->
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        var n = parseInt(prompt("nhap so tu nhien > 0"));
+
+        function tong(n) {
+            var sum = 0;
+            var x = 1;
+            for (x; x <= n; x++) {
+                sum += x;
+
+            }
+            return sum;
+        }
+        tong(n);
+
+        if (n <= 0) {
+            alert(" hay nhap so tu nhien > 0");
+        }
+        else {
+            document.write("Ket qua la : " + tong(n) / n);
+        }
+
+    </script>
+</body>
+
+</html>

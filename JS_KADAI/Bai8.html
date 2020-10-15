@@ -1,0 +1,53 @@
+<!--Bài 8: Viết chương trình gồm 1 form như hình, 
+    nhập vào 1 số nguyên n bất kì và in ra toàn bộ số nguyên tố trong khoảng từ 1 đến n
+-->
+<html>
+
+<head>
+</head>
+
+<body>
+    <form method="get" action="">
+        Enter a Number: <input type="text" id="number" value="" />
+        <input type="button" value="Print Result" onclick="print()" />
+    </form>
+    <div id="result">
+    </div>
+    <script>
+        function check(j) {
+            var a = true;
+
+            if (j < 2) {
+                a = false;
+            }
+            else if (j == 2) {
+                a = true;
+            }
+            else if (j % 2 == 0) {
+                a = false;
+            }
+            else {
+                for (var i = 3; i < Math.sqrt(j); i += 2) {
+                    if (j % i == 0) {
+                        a = false;
+                        break;
+                    }
+                }
+            }
+            return a;
+        }
+        function print() {
+            var number = document.getElementById("number").value;
+            number = parseInt(number);
+            var b = '';
+            for (var i = 1; i <= number; i++) {
+                if (check(i)) {
+                    b += i + ' <br/>';
+                }
+            }
+            document.getElementById("result").innerHTML = b;
+        }       
+    </script>
+</body>
+
+</html>
