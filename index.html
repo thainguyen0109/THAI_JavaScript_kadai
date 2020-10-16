@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+  <title>Static Template</title>
+  <link rel="stylesheet" href="footer.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  <div class="khoi__slide">
+    <div class="cac__slide">
+      <div class="slide__active">
+        <div class="number__text">1/6</div>
+        <img id="full" src="./Collection/hanoi.jpg" alt="ハノイ" />
+        <div class="text" id="active">ハノイ</div>
+      </div>
+      <div class="slide">
+        <div class="number__text">2/6</div>
+        <!-- <img src="./Collection/halong.jpg" alt="ハロン湾" /> -->
+        <div class="text">ハロン湾</div>
+      </div>
+      <div class="slide">
+        <div class="number__text">3/6</div>
+        <!-- <img src="./Collection/hue.jpg" alt="フエフエ" /> -->
+        <div class="text">フエフエ</div>
+      </div>
+      <div class="slide">
+        <div class="number__text">4/6</div>
+        <!-- <img src="./Collection/hoian.jpg" alt="ホイアン" /> -->
+        <div class="text">ホイアン</div>
+      </div>
+      <div class="slide">
+        <div class="number__text">5/6</div>
+        <!-- <img src="./Collection/dalat.jpg" alt="ダラット" /> -->
+        <div class="text">ダラット</div>
+      </div>
+      <div class="slide">
+        <div class="number__text">6/6</div>
+        <!-- <img src="./Collection/hcm.jpg" alt="ホチミン市" /> -->
+        <div class="text">ホチミン市</div>
+      </div>
+    </div>
+    <div class="container_bottom">
+      <img src="./Collection/hanoi.jpg" alt="ハノイ" onclick="Function(this)" />
+      <img src="./Collection/halong.jpg" alt="ハロン湾" onclick="Function(this)" />
+      <img src="./Collection/hue.jpg" alt="フエフエ" onclick="Function(this)" />
+      <img src="./Collection/hoian.jpg" alt="ホイアン" onclick="Function(this)" />
+      <img src="./Collection/dalat.jpg" alt="ダラット" onclick="Function(this)" />
+      <img src="./Collection/hcm.jpg" alt="ホチミン市" onclick="Function(this)" />
+    </div>
+    <script>
+
+      function Function(smallimg) {
+        var fullimg = document.getElementById("full");
+        fullimg.src = smallimg.src;
+      }
+    </script>
+    <div class="nut">
+      <span class="prev">❮</span>
+      <span class="next">❯</span>
+    </div>
+</body>
+
+</html>
